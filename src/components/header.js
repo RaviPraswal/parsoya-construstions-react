@@ -58,9 +58,9 @@ const Header = () => {
   return (
     <header>
         <section className="header">
-        <div className="container">
+        <div className="">
           <Navbar />
-          <Logo_Title />
+          {/* <Logo_Title /> */}
           {/* <canvas ref={canvasRef} /> */}
         </div>
       </section>

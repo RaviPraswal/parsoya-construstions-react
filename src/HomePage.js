@@ -18,7 +18,7 @@ const HomePage = () => {
       transition={{ duration: 0.5 }} // Animation duration
       className="homepage"
     >
-      <section className="gradient-bg text-center">
+      <section className="gradient-bg text-center container">
         <Header/>
       </section>
       <main>

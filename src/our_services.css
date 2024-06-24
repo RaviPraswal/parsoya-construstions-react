@@ -1,0 +1,54 @@
+/* Services.css */
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    /* Add any additional styling for the container */
+  }
+  
+  .services-left,
+  .services-right {
+    width: 50%;
+    /* Add any additional styling for the left and right columns */
+  }
+  
+  /* Styling for the left column */
+  .services-left img {
+    max-width: 100%;
+    height: auto;
+    /* Add any specific image styling */
+  }
+  
+  .services-left h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    /* Add any specific heading styling */
+  }
+  
+  .services-left p {
+    font-size: 16px;
+    /* Add any specific paragraph styling */
+  }
+  
+  /* Styling for the right column */
+  .services-right h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    /* Add any specific heading styling */
+  }
+  
+  .service-category {
+    margin-bottom: 24px;
+    /* Add any specific styling for each service category */
+  }
+  
+  .service-category h3 {
+    font-size: 18px;
+    /* Add any specific styling for service category headings */
+  }
+  
+  .service-category p {
+    font-size: 14px;
+    /* Add any specific styling for service category descriptions */
+  }
+  

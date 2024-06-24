@@ -1,7 +1,7 @@
 .gradient-bg {
-    background: linear-gradient(109deg, hsla(0, 0%, 0%, 1) 22%, hsla(0, 0%, 100%, 1) 100%);
+    background: rgb(255, 193, 0);
     color: white;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
     border-radius: 0px 0px 250px 0px;
 }
 .bg-image{
@@ -103,8 +103,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 2rem;
-    padding-top: 100px;
+    /* margin-bottom: 2rem;
+    padding-top: 100px; */
 }
 
 .logo {
@@ -219,14 +219,6 @@ body {
   font-weight: initial;
 }
 
-.dark {
-  background: #110f16;
-}
-
-.light {
-  background: #f3f5f7;
-}
-
 a,
 a:hover {
   text-decoration: none;
@@ -248,12 +240,8 @@ a:hover {
   margin: 0 0 2rem 0;
   overflow: hidden;
   position: relative;
-  color: #ffffff;
 }
 
-.postcard.dark {
-  background-color: #18151f;
-}
 
 .postcard.light {
   background-color: #e1e5ea;
@@ -327,7 +315,7 @@ a:hover {
 
 .postcard__tagbox .tag__item {
   display: inline-block;
-  background: rgba(83, 83, 83, 0.4);
+  background: rgb(255, 193, 0);
   border-radius: 3px;
   padding: 2.5px 10px;
   margin: 0 5px 5px 0;
@@ -427,13 +415,8 @@ a:hover {
     width: 55px;
   }
 
-  .postcard.dark .postcard__text:before {
-    background: #18151f;
-  }
 
-  .postcard.light .postcard__text:before {
-    background: #e1e5ea;
-  }
+  
 }
 
 .postcard .postcard__tagbox .green.play:hover {
@@ -562,8 +545,6 @@ a:hover {
 }
 
 body {
-  background-color: #FFE53B;
-  background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
   min-height: 100vh;
   font-family: 'Fira Sans', sans-serif;
 }
@@ -800,5 +781,7 @@ body {
 .stat-card h3 { font-size: 3rem; font-weight: bold; margin-bottom: 10px; }
 
 .stat-card p { font-size: 1.2rem; margin-bottom: 0; }
+
+
 
   /* test */
