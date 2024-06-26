@@ -13,7 +13,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 className="text-uppercase">Our Locations</h5>
+            <h5 className="text-uppercase">Projects</h5>
             <div className="map-container">
               <img src={indiaMap} alt="India Map" className="map-image" />
               <div className="location-dot" style={{ left: '38%', top: '33%' }}></div>

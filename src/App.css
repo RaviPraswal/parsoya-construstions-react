@@ -1,15 +1,22 @@
 .gradient-bg {
     background: rgb(255, 193, 0);
     color: white;
-    /* padding-bottom: 100px; */
-    border-radius: 0px 0px 250px 0px;
-}
-.bg-image{
-    background-image: url('./images/gradient\ \(3\).png');
-    background-size: cover;
+    height: 500px;
+    background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.bg-img2{
+  background-image: url('./images/bg_2.jpg.webp');
+  background-position: 50% 0%;
+}
+
+.background-image {
+  background-image: url('./images/Palampur_Hotel.png');
+  background-position: 50% 0%;
+}
 
 
 .boxshadow{
@@ -109,8 +116,9 @@
 
 .logo {
     margin-right: 1rem;
-    width: 100px;
+    width: 100%;
     height: auto;
+    border-radius: 100vw;
 }
 
 h1 {
@@ -785,3 +793,72 @@ body {
 
 
   /* test */
+
+
+
+/* Ensure the header container has a fixed height and uses flexbox for alignment */
+.header-container {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem; /* Adjust as needed */
+  height: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  height: 100%; /* Adjust as needed to fit within the navbar */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar-item {
+  padding: 0 1rem;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.25rem 0; /* Adjust for padding as needed */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  border-bottom: 3px solid var(--color-highlight);
+  color: var(--color-highlight);
+}
+
+
+
+/* ============================================================================================ */
+
+

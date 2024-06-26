@@ -1,0 +1,72 @@
+/* About Us Section */
+.about-section {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Content Columns */
+  .content-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .text-section,
+  .philosophy-section {
+    width: 45%;
+  }
+  
+  /* Text Styling */
+  .text-section h2,
+  .philosophy-section h2,
+  .leadership-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .text-section p,
+  .philosophy-section p,
+  .leadership-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Image Styling */
+  .image-section img {
+    max-width: 20%;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  .image-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  /* Leadership Team Styling */
+  .leadership-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .leadership-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Additional Styling (customize as needed) */
+  /* For example, add background colors, borders, or spacing */
+  
+  /* Responsive Design (optional) */
+  @media screen and (max-width: 768px) {
+    .content-section {
+      flex-direction: column;
+    }
+    .text-section,
+    .philosophy-section,
+    .leadership-section {
+      width: 100%;
+    }
+  }
+  

@@ -24,11 +24,11 @@ const ContactUs = () => {
         </div>
         <div className="col-md-4 contact-info">
           <h5>Our Location</h5>
-          <p>Construction Company</p>
-          <p>1234 Main St.</p>
-          <p>City, State Zip</p>
-          <p>Phone: 555-555-5555</p>
-          <p>Email: <a href="mailto:info@constructioncompany.com">info@constructioncompany.com</a></p>
+          <p>Parsoya Constructions</p>
+          <p>J-208, Palam Vihar Ext.,</p>
+          <p>Gurgaon, Haryana, 122001</p>
+          <p>Phone: 9467650878, 9818565302</p>
+          <p>Email: <a href="mailto:ravipraswal@outlook.com">ravipraswal@outlook.com</a></p>
           <div id="map"></div>
         </div>
       </div>
