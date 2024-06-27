@@ -2,6 +2,9 @@ import React from 'react';
 import Apartment from '../images/apartment.jpg';
 import PalampurHotel from '../images/Palampur_Hotel.png';
 import ModernResidentialVilla2 from '../images/modern-residential-villa2.jpeg';
+// import OverlaySVG from '../images/instagram-home-page-interface-with-smartphone.svg';
+import '../LandmarkProjects.css';
+
 const LandmarkProjects = () => {
     
     
@@ -9,6 +12,10 @@ const LandmarkProjects = () => {
   return (
     <section className="container mt-5 ">
       <h2>Landmark Projects</h2>
+      <div className="carousel-overlay">
+        {/* <img src={OverlaySVG} alt="Overlay" className="overlay-svg" /> */}
+        {/* <OverlaySVG width="100" height="100" /> */}
+      </div>
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

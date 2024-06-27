@@ -21,8 +21,26 @@ const HomePage = () => {
       transition={{ duration: 0.5 }} // Animation duration
       className="homepage"
     >
-      <section className="gradient-bg text-center container background-image" style={{backgroundimage: `url(${PalampurHotel})`, backgroundposition: `50% 0%`}}>
+      <section className="gradient-bg text-center background-image" style={{backgroundimage: `url(${PalampurHotel})`, backgroundposition: `50% 0%`}}>
+      <div className="mbr-overlay" style={{backgroundColor: "rgba(255, 193, 0, 0.3)"}}>
+  <div class="container">
+
         <Header/>
+
+          <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>PARSOYA CONSTRUCTIONS.</strong></h1>
+                    
+                    <p class="mbr-text mbr-fonts-style display-7">We provide high-quality construction services for all your needs.</p>
+                    {/* <div class="mbr-section-btn mt-3"><a class="btn btn-lg btn-secondary display-4" href="https://mobiri.se">About Me</a> <a class="btn btn-lg btn-info display-4" href="https://mobiri.se">Read My Blog</a></div> */}
+                </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
       </section>
       <main>
         <section id="services" className="services py-5">
