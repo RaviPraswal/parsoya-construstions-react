@@ -1,17 +1,27 @@
+import React, { useRef, useEffect } from 'react';
+import Video from '../images/construction-site-view.mp4';
 
-import React, { useRef } from 'react';
-import Video from '../images/construction-site-view.mp4'
-const VIDEO_PATH = '../images/construction-site-view.mp4';
+const PlayerComponent = () => {
+    const videoRef = useRef(null);
 
-const PlayerComponent = ({ src }) => {
+    useEffect(() => {
+        const video = videoRef.current;
+        if (video) {
+            video.muted = true; // Ensure the video is muted
+            video.play().catch(error => {
+                console.error('Error trying to play the video:', error);
+            });
+        }
+    }, []);
+
     return (
         <div className="video-player">
-            <video width="100%" controls>
+            <video ref={videoRef} width="100%"  loop>
                 <source src={Video} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            {/* <ReactPlayer url={Video} type="video/mp4" controls="true"/> */}
         </div>
     );
-}
+};
+
 export default PlayerComponent;
