@@ -14,30 +14,30 @@ const ContactUs = () => {
            <h3 class="text-center text-uppercase">contact us</h3>
            {/* <p class="text-center w-75 m-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum purus at sem ornare sodales. Morbi leo nulla, pharetra vel felis nec, ullamcorper condimentum quam.</p> */}
            <div class="row">
-             <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+             <div class="col-sm-12 col-md-6 col-lg-4">
                <div class="card border-0">
                   <div class="card-body text-center">
-                  <MobileIcon style={{ width: 50, height: 50, fill: 'midnightblue' }}/>
+                  <MobileIcon style={{ width: 50, height: 50}} className='yellow-icon'/>
                   
-                    <h4 class="text-uppercase mb-5">call us</h4>
+                    <h4 class="text-uppercase mt-3">call us</h4>
                     <p>+91-9467650878, +91-9818565302</p>
                   </div>
                 </div>
              </div>
-             <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+             <div class="col-sm-12 col-md-6 col-lg-4">
                <div class="card border-0">
                   <div class="card-body text-center">
-                  <LocationIcon style={{ width: 50, height: 50, fill: 'midnightblue' }}/>
-                    <h4 class="text-uppercase mb-5">office loaction</h4>
+                  <LocationIcon style={{ width: 50, height: 50}} className='yellow-icon'/>
+                    <h4 class="text-uppercase mt-3">office loaction</h4>
                     <address>J-208, Palam Vihar Ext. Gurgaon, Haryana, 122001</address>
                   </div>
                 </div>
              </div>
-             <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+             <div class="col-sm-12 col-md-6 col-lg-4">
                <div class="card border-0">
                   <div class="card-body text-center">
-                  <EmailIcon style={{ width: 50, height: 50, fill: 'midnightblue' }}/>
-                    <h4 class="text-uppercase mb-5">email</h4>
+                  <EmailIcon style={{ width: 50, height: 50}} className='yellow-icon'/>
+                    <h4 class="text-uppercase mt-3">email</h4>
                     <p><a href="mailto:ravipraswal@outlook.com">ravipraswal@outlook.com</a></p>
                   </div>
                 </div>

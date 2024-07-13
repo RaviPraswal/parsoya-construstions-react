@@ -17,7 +17,7 @@ const OurServices = () => {
       <div className="row">
         <div className="col-md-4 mb-4">
           <div className="card h-100 position-relative">
-            <img src={CommercialConstruction} className="card-img-top" alt="Residential Construction" />
+            <img src={ResidentialConstruction} className="card-img-top" alt="Residential Construction" />
             <div className="card-body overlay">
               <h5 className="card-title">Residential Construction</h5>
               <p className="card-text">
@@ -28,7 +28,7 @@ const OurServices = () => {
         </div>
         <div className="col-md-4 mb-4">
           <div className="card h-100 position-relative">
-            <img src={ResidentialConstruction} className="card-img-top" alt="Commercial Construction" />
+            <img src={CommercialConstruction} className="card-img-top" alt="Commercial Construction" />
             <div className="card-body overlay">
               <h5 className="card-title">Commercial Construction</h5>
               <p className="card-text">
