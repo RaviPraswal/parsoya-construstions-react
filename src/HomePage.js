@@ -6,7 +6,7 @@ import Home from "./components/header";
 import LandmarkProjects from "./components/landmark_projects";
 import Our_Services from "./components/our_services_component";
 import Footer from "./components/footer";
-import Testimonials from "./components/testimonial";
+import Testimonials3 from "./components/Testimonials3";
 import ContactUs from "./components/contact_us_component";
 import AboutUs from "./components/about_us";
 import AboutUs2 from "./components/about_us2";
@@ -66,13 +66,14 @@ const HomePage = () => {
         <section id="services" className="services">
             <PlayerComponent />
         </section>
-
+        <Testimonials3 />
         <section id="services" className="services">
             <ProjectShowcase />
         </section>
 
 
-        {/* <Testimonials /> */}
+        {/* <Testimonials2 /> */}
+        
         {/* <LandmarkProjects /> */}
           <ContactUs />
        
