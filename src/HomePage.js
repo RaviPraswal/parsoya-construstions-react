@@ -14,6 +14,8 @@ import OurServices from "./components/our_services2";
 import PlayerComponent from "./components/video_player";
 import PalampurHotel from './images/Palampur_Hotel.png';
 import bg_img2 from './images/bg_2.jpg.webp';
+import CraftingDreams from "./components/ConstructionPage";
+import ProjectShowcase from "./components/ProjectShowcase";
 
 const videoSource = require('./images/construction-site-view.mp4').default; // Replace with your actual video URL
 const HomePage = () => {
@@ -57,10 +59,18 @@ const HomePage = () => {
             <OurServices />
         </section>
 
+        <section id="services" className="services">
+            <CraftingDreams />
+        </section>
         
         <section id="services" className="services">
             <PlayerComponent />
         </section>
+
+        <section id="services" className="services">
+            <ProjectShowcase />
+        </section>
+
 
         {/* <Testimonials /> */}
         {/* <LandmarkProjects /> */}

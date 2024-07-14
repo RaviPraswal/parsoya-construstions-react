@@ -1,6 +1,6 @@
 // CarouselComponent.jsx
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+// import React from 'react';
 import Slider from 'react-slick';
 import '../OurServices2.css';
 import { Carousel } from 'react-bootstrap';
@@ -9,7 +9,81 @@ import CommercialConstruction from '../images/Corporate Office.jpg'
 import RenovationAndRemodeling from '../images/renovation_remodeling_image.jpg'
 import ResidentialResort from '../images/Residential Resort.jpg'
 
+const Counters = () => {
+    const [counters, setCounters] = useState([
+        { id: 'happy-clients', value: 0, target: 1000, label: 'Happy Clients' },
+        { id: 'successful-projects', value: 0, target: 500, label: 'Successful Projects' },
+        { id: 'customer-satisfaction', value: 0, target: 99, label: 'Customer Satisfaction' }
+    ]);
+
+    // Function to start counting animation
+    const startCounter = (index, increment) => {
+        let current = 0;
+        const interval = setInterval(() => {
+            setCounters(prevCounters => {
+                const updatedCounters = [...prevCounters];
+                updatedCounters[index].value = current;
+                return updatedCounters;
+            });
+            current += increment;
+            if (current >= counters[index].target) {
+                setCounters(prevCounters => {
+                    const updatedCounters = [...prevCounters];
+                    updatedCounters[index].value = counters[index].target;
+                    return updatedCounters;
+                });
+                clearInterval(interval);
+            }
+        }, 50); // Adjust interval speed as needed
+    };
+
+    // Function to check if counters section is in view
+    const checkVisibilityAndStartCounters = () => {
+        const countersSection = document.querySelector('.counters');
+        const isVisible = () => {
+            const rect = countersSection.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        };
+
+        // Start counters if section is visible
+        if (isVisible()) {
+            counters.forEach((counter, index) => {
+                startCounter(index, Math.ceil(counter.target / 100)); // Increment speed
+            });
+        }
+    };
+
+    // useEffect to start counters on component mount and when counters section comes into view
+    useEffect(() => {
+        checkVisibilityAndStartCounters();
+        window.addEventListener('scroll', checkVisibilityAndStartCounters);
+        return () => {
+            window.removeEventListener('scroll', checkVisibilityAndStartCounters);
+        };
+    }, []); // Empty dependency array to run effect only once on mount
+
+    return (
+        <div className="counters">
+            <div className="row counter-items">
+                {counters.map(counter => (
+                    <div key={counter.id} className="col-3">
+                        <h1>{counter.id === 'customer-satisfaction' ? `${counter.value}%` : `${counter.value}+`}</h1>
+                        <p>{counter.label}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+
 const OurServices = () => {
+  
     // Data for carousel items
     const carouselItems = [
         {
@@ -68,8 +142,10 @@ const OurServices = () => {
                         </Carousel.Item>
                     ))}
                 </Carousel>
+                
+                <Counters/>
 
-                <div className="counters">
+                {/* <div className="counters">
                     <div className="row counter-items">
                         <div className="col-3">
                             <h1>1000+</h1>
@@ -84,78 +160,12 @@ const OurServices = () => {
                             <p>Customer Satisfaction</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
     
 
-    // return (
-    //     <div className="carousel-container">
-    //         <div>
-    //             <h2>Our Construction Services</h2>
-    //             <div class="d-relative">
-    //                 <Carousel>
-    //                     {carouselItems.map((item, index) => (
-    //                         <Carousel.Item key={index}>
-    //                             <div className="row">
-    //                                 {/* <div className="col-6 col-md-6 col-lg-6 px-0">
-    //                                     <div className="carousel-content px-5">
-    //                                         <h1 className='mb-5'>{item.title}</h1>
-    //                                         <p>{item.text}</p>
-    //                                     </div>
-    //                                 </div> */}
-    //                                 <div className="col-12">
-    //                                     <div className="carousel-images">
-    //                                     <div
-    //                                         className="carousel-image"
-    //                                         style={{
-    //                                             backgroundImage: 'linear-gradient(40deg, #000000 0%, #ffffff 74%)',
-    //                                         }}
-    //                                     >
-    //                                         <img
-    //                                             src={item.image}
-    //                                             alt={item.title}
-    //                                             className="img-fluid"
-    //                                         />
-    //                                         <div className="carousel-overlay">
-    //                                             <div className="carousel-content">
-    //                                                 <h1 className="mb-5">{item.title}</h1>
-    //                                                 <p>{item.text}</p>
-    //                                             </div>
-    //                                         </div>
-    //                                     </div>
-    //                                     </div>
-    //                                 </div>
-    //                             </div>
-    //                             {/* <Carousel.Caption>
-    //                                 <h3>{item.title}</h3>
-    //                                 <p>{item.text}</p>
-    //                             </Carousel.Caption> */}
-    //                         </Carousel.Item>
-    //                     ))}
-    //                 </Carousel>
-
-    //                 <div className='counters'>
-    //                     <div className='row' style={{justifyContent : `space-between`}}>
-    //                         <div className='col-3'>
-    //                             <h1>1000+</h1>
-    //                             <p>Happy Clients</p>
-    //                         </div>
-    //                         <div className='col-3'>
-    //                             <h1>500+</h1>
-    //                             <p>Successfule Projects</p>
-    //                         </div>
-    //                         <div className='col-3'>
-    //                             <h1>99%</h1>
-    //                             <p>Customer Satisfaction</p>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // );
 };
 
 export default OurServices;
