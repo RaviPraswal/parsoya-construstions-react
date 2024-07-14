@@ -37,7 +37,7 @@ body .testimonial .row .carousel .carousel-control-prev {
 .testimonial .row .tabs li.active::after {
     position: absolute;
     content: "";
-    background-color: #71b85f;
+    background-color: #FFC100;
     border-radius: 50%;
 }
 .testimonial .row .tabs li.active::before {
@@ -107,7 +107,7 @@ body .testimonial .row .carousel .carousel-control-prev {
     z-index: -1;
     width: 100%;
     height: 100%;
-    border: 4px solid #dff9d9;
+    border: 4px solid #f9f1d9;
     border-radius: 50%;
     transform: scale(1);
     transition: 0.3s;
@@ -157,4 +157,18 @@ body .testimonial .row .carousel .carousel-control-prev {
 }
 @media only screen and (max-width: 567px) {
     /* Add your mobile styles here */
+
+    .testimonial .row .tabs li.active::before, .testimonial .row .tabs li.active::after {
+        position: unset;
+        background-color: unset;
+    }
+
+    .testimonial .row .tabs {
+        flex-direction: unset;
+    }
+
+    .testimonial .row .tabs li figure::after {
+        border: 4px solid #FFC100;
+    }
+
 }

@@ -1,21 +1,15 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { motion } from "framer-motion"; // Import motion from framer-motion
 import Home from "./components/header";
-import LandmarkProjects from "./components/landmark_projects";
-import Our_Services from "./components/our_services_component";
-import Footer from "./components/footer";
-import Testimonials3 from "./components/Testimonials3";
-import ContactUs from "./components/contact_us_component";
-import AboutUs from "./components/about_us";
 import AboutUs2 from "./components/about_us2";
 import OurServices from "./components/our_services2";
-import PlayerComponent from "./components/video_player";
-import PalampurHotel from './images/Palampur_Hotel.png';
-import bg_img2 from './images/bg_2.jpg.webp';
 import CraftingDreams from "./components/ConstructionPage";
+import PlayerComponent from "./components/video_player";
+import Testimonials3 from "./components/Testimonials3";
 import ProjectShowcase from "./components/ProjectShowcase";
+import ContactUs from "./components/contact_us_component";
+import Footer from "./components/footer";
 
 const videoSource = require('./images/construction-site-view.mp4').default; // Replace with your actual video URL
 const HomePage = () => {
@@ -37,18 +31,6 @@ const HomePage = () => {
           </div>
       </div>
       <main>
-        {/* <section id="services" className="services py-5">
-          <div className="container">
-            <Our_Services />
-          </div>
-        </section> */}
-
-        {/* <section id="services" className="services">
-          <div className="container">
-            <AboutUs />
-          </div>
-        </section> */}
-
         <section id="services" className="services">
           <div className="container">
             <AboutUs2 />
@@ -56,29 +38,32 @@ const HomePage = () => {
         </section>
 
         <section id="services" className="services">
-            <OurServices />
+          <OurServices />
         </section>
 
         <section id="services" className="services">
-            <CraftingDreams />
+          <CraftingDreams />
         </section>
         
         <section id="services" className="services">
-            <PlayerComponent />
+          <PlayerComponent />
         </section>
-        <Testimonials3 />
-        <section id="services" className="services">
-            <ProjectShowcase />
-        </section>
-
-
-        {/* <Testimonials2 /> */}
         
-        {/* <LandmarkProjects /> */}
+        <section id="services" className="services">
+          <Testimonials3 />
+        </section>
+        
+        <section id="services" className="services">
+          <ProjectShowcase />
+        </section>
+
+        <section id="services" className="services">
           <ContactUs />
-       
+        </section>
       </main>
-      <Footer />
+      <section id="services" className="services">
+        <Footer />
+      </section>
     </div>
   );
 };

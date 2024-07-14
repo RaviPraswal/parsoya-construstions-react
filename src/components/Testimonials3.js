@@ -14,7 +14,7 @@ const Testimonial = () => {
         <section className="testimonial">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 d-none d-lg-block">
+                    <div className="col-lg-6 d-lg-block">
                         <ol className="carousel-indicators tabs">
                             <li onClick={() => handleSelect(0)} className={activeIndex === 0 ? 'active' : ''}>
                                 <figure>
